@@ -19,7 +19,7 @@ public class Account {
     @Column (name = "bankBalance")
     private String bankBalance;
 
-    @Column(name = "account")
-    @OneToOne
-    private User account;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "documet", referencedColumnName = "document")
+    private User document;
 }
