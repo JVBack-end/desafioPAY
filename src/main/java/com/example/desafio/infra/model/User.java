@@ -14,6 +14,10 @@ import lombok.*;
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column (name = "id")
+    private long id;
+
     @Column (name = "document")
     private String document;
 
